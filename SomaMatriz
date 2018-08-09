@@ -1,0 +1,46 @@
+package iniciais;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class SomaMatriz {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        Random numeros = new Random();
+
+        System.out.print("Digite o numero de linhas: ");
+        int linhas = entrada.nextInt();
+        System.out.print("Digite o numero de colunas: ");
+        int colunas = entrada.nextInt();
+       
+        int matrizA[][] = new int[linhas][colunas];
+        int matrizB[][] = new int[linhas][colunas];
+
+//         int notas[][] = new int[lin][col];
+//        for (int lin=0; lin<linhas; lin++){
+//            for (int col=0; col<colunas; col++){
+//                System.out.print(numeros.nextInt());
+//                }
+//        }
+        for (int lin = 0; lin < linhas; lin++) {
+            for (int col = 0; col < colunas; col++) {
+                matrizA[lin][col] = (numeros.nextInt(9));
+                System.out.print(matrizA[lin][col]);
+            }
+            System.out.println(" ");
+        }
+        
+        System.out.println(" ");
+        
+        for (int lin = 0; lin < linhas; lin++) {
+            for (int col = 0; col < colunas; col++) {
+                matrizB[lin][col] = (numeros.nextInt(9));
+                System.out.print(matrizB[lin][col]);
+            }
+            System.out.println(" ");
+        }
+
+    }
+
+}
