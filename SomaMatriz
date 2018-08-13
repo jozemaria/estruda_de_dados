@@ -16,31 +16,49 @@ public class SomaMatriz {
        
         int matrizA[][] = new int[linhas][colunas];
         int matrizB[][] = new int[linhas][colunas];
-
+        int matrizC[][] = new int[linhas][colunas]; // RECEBE VALORES A+B
+        
+        
 //         int notas[][] = new int[lin][col];
 //        for (int lin=0; lin<linhas; lin++){
 //            for (int col=0; col<colunas; col++){
 //                System.out.print(numeros.nextInt());
 //                }
 //        }
+
+        //MATRIZ A
         for (int lin = 0; lin < linhas; lin++) {
             for (int col = 0; col < colunas; col++) {
-                matrizA[lin][col] = (numeros.nextInt(9));
-                System.out.print(matrizA[lin][col]);
+                matrizA[lin][col] = (numeros.nextInt(20));
+                System.out.printf("%3d ",matrizA[lin][col]);
             }
             System.out.println(" ");
         }
         
-        System.out.println(" ");
+        System.out.println("+");
         
+        //MATRIZ B
         for (int lin = 0; lin < linhas; lin++) {
             for (int col = 0; col < colunas; col++) {
-                matrizB[lin][col] = (numeros.nextInt(9));
-                System.out.print(matrizB[lin][col]);
+                matrizB[lin][col] = (numeros.nextInt(20));
+                System.out.printf("%3d ",matrizB[lin][col]); 
+                
             }
             System.out.println(" ");
         }
 
+        System.out.println("_________________");
+        
+        for (int lin = 0; lin < linhas; lin++) {
+            for (int col = 0; col < colunas; col++) {
+                // SOMANDO MATRIZ A + B => ENVIANDO PARA C
+                matrizC[lin][col] = matrizA[lin][col] + matrizB[lin][col]; 
+                System.out.printf("%3d ",matrizC[lin][col]);
+            }
+            System.out.println(" ");
+        }
+        
+        
     }
 
 }
